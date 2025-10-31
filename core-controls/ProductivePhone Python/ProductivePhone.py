@@ -20,9 +20,7 @@ __name__ = "ProductivePhone"
 # Functions
 class ProductivePhone:
     def call_app(self, name, number):
-        self.name = name
-        self.number = number
-
+  
         contact_list = []
         contact_list.append(self.name)
         contact_list.append(self.number)
@@ -74,7 +72,6 @@ class ProductivePhone:
 
     
     def quran_app(self, quran="https://quran.com"):
-        self.quran = quran
         try:
             open_quran = webbrowser.get("safari")
             open_quran.open(quran)
@@ -89,7 +86,6 @@ class ProductivePhone:
             print("Ooops.")
     
     def tts(self, text):
-        self.text = text
 
         engine = pyttsx3.init()
         pyttsx3.speak(text)
@@ -116,7 +112,6 @@ class ProductivePhone:
 
     
     def video_player(self, video_path):
-        self.video_path = video_path
 
         cap = cv2.VideoCapture(video_path)
         if not cap.isOpened():
@@ -136,8 +131,7 @@ class ProductivePhone:
         cv2.destroyAllWindows()
     
     def browser(self, where_to_go):
-        self.where_to_go = where_to_go
-
+  
         try:
             safari = webbrowser.get("safari")
             safari.open(where_to_go)
