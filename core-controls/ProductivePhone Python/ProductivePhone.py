@@ -13,17 +13,14 @@ import cv2
 # Introduction
 print("===== ProductivePhone MySimpleOS M0 ====")
 
-# Version
-__version__ = "M0"
-__name__ = "ProductivePhone"
 
 # Functions
 class ProductivePhone:
     def call_app(self, name, number):
   
         contact_list = []
-        contact_list.append(self.name)
-        contact_list.append(self.number)
+        contact_list.append(name)
+        contact_list.append(number)
         print(contact_list)
 
         p = pyaudio.PyAudio()
@@ -37,7 +34,7 @@ class ProductivePhone:
 
         print("* Call record started.")
         frames = []
-        for i in range(int(44100 * 7200 / 1024)):
+        for i in range(int(44100 * 10 / 1024)):
             data = stream.read(1024)
             frames.append(data)
         
@@ -86,7 +83,6 @@ class ProductivePhone:
             print("Ooops.")
     
     def tts(self, text):
-
         engine = pyttsx3.init()
         pyttsx3.speak(text)
         engine.runAndWait()
@@ -112,7 +108,6 @@ class ProductivePhone:
 
     
     def video_player(self, video_path):
-
         cap = cv2.VideoCapture(video_path)
         if not cap.isOpened():
             print("Video failed.")
@@ -131,7 +126,6 @@ class ProductivePhone:
         cv2.destroyAllWindows()
     
     def browser(self, where_to_go):
-  
         try:
             safari = webbrowser.get("safari")
             safari.open(where_to_go)
