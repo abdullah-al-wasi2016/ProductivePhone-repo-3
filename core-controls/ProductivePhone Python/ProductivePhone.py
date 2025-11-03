@@ -23,6 +23,7 @@ class ProductivePhone:
         contact_list.append(number)
         print(contact_list)
 
+    
         p = pyaudio.PyAudio()
         stream = p.open(
             rate=44100,
