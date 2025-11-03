@@ -9,10 +9,11 @@ import time
 import dotenv
 import os
 import cv2
+from datetime import datetime
 
 # Introduction
 print("===== ProductivePhone MySimpleOS M0 ====")
-
+print(f"Time: {datetime(2008, 1, 1, 00, 00, 00)}")
 
 # Functions
 class ProductivePhone:
