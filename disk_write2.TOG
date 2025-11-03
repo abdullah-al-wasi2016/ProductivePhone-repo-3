@@ -1,0 +1,7 @@
+
+    if [name] == ['main']:
+        repos = {'rep-1', 'rep-2'}
+        zipfile(repos)
+        if zipfile(repos) == 'failed' or -1:
+            print('Sorry')
+    
